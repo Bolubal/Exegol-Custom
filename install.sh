@@ -1,7 +1,7 @@
-# Cloner le dépôt Exegol-Ressources et entrer dans le dossier
+# Cloner le dépôt Exegol-Custom et entrer dans le dossier
 apt update
 git clone https://github.com/Bolubal/Exegol-Custom.git
-cd Exegol-Ressources
+cd Exegol-Custom
 
 # Ajouter des configurations à tmux.conf et zsh_history
 cat tmux.conf >> ~/.tmux.conf
@@ -27,7 +27,7 @@ mv ./settarget.sh /opt/tools/Exegol-history/
 
 # Revenir à la racine et supprimer le dossier cloné
 cd ..
-rm -rf Exegol-Ressources
+rm -rf Exegol-Custom
 
 # Installation de paquets Python et systèmes
 cd /tmp
@@ -60,7 +60,7 @@ mv Ghostpack-CompiledBinaries /opt/resources/windows
 cd /opt/resources/windows
 wget https://raw.githubusercontent.com/fashionproof/EnableAllTokenPrivs/master/EnableAllTokenPrivs.ps1
 wget https://raw.githubusercontent.com/Frozenka/linfast/main/winfast
-wget https://raw.githubusercontent.com/Frozenka/Exegol-Ressources/refs/heads/main/getdns.sh -O /opt/tools/dnsvalidator/getdns.sh
+wget https://raw.githubusercontent.com/Frozenka/Exegol-Custom/refs/heads/main/getdns.sh -O /opt/tools/dnsvalidator/getdns.sh
 
 cd /opt/resources/linux
 wget https://raw.githubusercontent.com/Frozenka/linfast/main/linfast

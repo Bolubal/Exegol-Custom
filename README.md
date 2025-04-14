@@ -1,45 +1,61 @@
-# Exegol Ressources
+
+# Exegol Custom 🚀
+
+## 🙌 Introduction
+ >⚙️ Ce dépôt est un fork du projet original : https://github.com/Frozenka/Exegol-Ressources
+ Il a été modifié afin d’y intégrer des fonctionnalités supplémentaires, notamment, l’outil Seatbelt.exe (https://github.com/GhostPack/Seatbelt), et une nouvelle personnalisation de TMUX
+ 
+[Exegol](https://github.com/ThePorgs/Exegol) est un outil puissant qui facilite le déploiement et la gestion de conteneurs Docker pour les pentesters 🐳
 
 
-## Introduction
-Exegol [Exegol GitHub Repository](https://github.com/ThePorgs/Exegol) est un outil puissant qui facilite le déploiement et la gestion de conteneurs. 
+## ⚡ Installation  (Votre configuration de base ne sera pas écrasée)
 
-#### Ce dépôt est un simple regroupement de mes ressources pour Exegol, me permettant de lancer des conteneurs personnalisés selon mon flux de travail a chaque nouveau conteneur.
+```bash
+wget https://raw.githubusercontent.com/Bolubal/Exegol-Custom/main/load_user_setup.sh && \
+cat load_user_setup.sh > ~/.exegol/my-resources/setup/load_user_setup.sh && \
+rm load_user_setup.sh
+```
 
+## 🧰 Fonctionnalités
 
-  
-![Exegol (1)](https://github.com/Frozenka/Exegol-Ressources/assets/13807685/ceecb3e0-d5c7-4d53-8cbd-ff0223119113)
+- 🖱️ **tmux avec la souris :** Plus besoin de connaître une multitude de raccourcis clavier.
+- 🧱 **Division du terminal tmux :** `Ctrl+b+'` pour diviser en quatre.
+- 🌐 **Serveur web Python en mode upload :** `pythonh`
+- 🔐 **Activation du SSH local :** `sshon`
+- ♻️ **Réinitialisation de l’interface réseau :** `runeth`
+- 🌍 **Affichage et copie de l’adresse IP TUN0 :** `tun0`
+- 🐚 **Shell interactif Linux (PTY) :** `pty`
+- ⌨️ **Passage en clavier AZERTY (PowerShell) :** `getfr`
+- 📁 **Serveur FTP anonyme :** `ftpa`
+- 🗂️ **Serveur WebDAV (port 80) :** partage du dossier `runwebdav`
+- 🎨 **Activation des couleurs PowerShell :** `getcolor`
+- 🖥️ **Activation du RDP :** `getrdp`
+- ⚡ **winPEAS + serveur web + ligne de téléchargement :** `winp`
+- ⚙️ **linPEAS + serveur web + ligne de téléchargement :** `linp`
+- 📦 **Serveur SMB dans le dossier courant :** `smbserv` (commande Windows copiée automatiquement)
+- 🧰 **Binaires utiles :** inclus (attention aux doublons avec \`/opt/ressources\`)
 
-## Installation : Votre configuration de base ne sera pas écrasée.
-`wget https://raw.githubusercontent.com/Frozenka/Exegol-Ressources/main/load_user_setup.sh && cat load_user_setup.sh > ~/.exegol/my-resources/setup/load_user_setup.sh && rm load_user_setup.sh `
-## Fonctionnalités
-- **Utilisation de tmux avec la souris :** Plus besoin de connaître une multitude de raccourcis clavier.
-- **Division du terminal tmux :** Divisez le terminal tmux en quatre en utilisant simplement `Ctrl+b+'`.
-- **Lancement d'un serveur web Python en upload :** Utilisez la commande `runwww 80`.
-- **Activation directe du SSH sur votre machine :** Utilisez la commande `sshon`.
-- **Réinitialisation de l'interface réseau :** Utilisez la commande `runeth`.
-- **Affichage et copie de l'adresse IP TUN0 :** Utilisez la commande `tun0`.
-- **Copie de la commande pour obtenir un shell dynamique sous Linux :** Utilisez la commande `pty`.
-- **Copie de la commande pour passer en AZERTY (PowerShell) :** Utilisez la commande `getfr`.
-- **Lancement d'un serveur FTP accessible en mode anonyme :** Utilisez la commande `runftp`.
-- **Lancement d'un serveur WebDAV sur le port 80 :** Partage du dossier "runwebdav".
-- **Copie de la commande pour activer les couleurs dans PowerShell :** Utilisez la commande `getcolor`.
-- **Copie de la  commande d'activation du RDP :** `getrdp`
-- **Telechargement de la derniere version de winpeas + activation serveur web + copie de la ligne de téléchargement:**  `winfast`
-- **Telechargement de la derniere version de linpeas + activation serveur web + copie de la ligne de téléchargement:**  `linfast`
-- **Lancement d'un server SMB dans le repertoire actuel:** `runsmbserv` La commande pour windows dans le presse papier
-- Quelques Binaires utiles (Potentiel doublons avec les ressources dans /op/ressources)
-  
-  
- Astuce :
- `tun0 && runwww 80` Permet de lancer un serveur web et d'avoir l'ip tun0 directement dans le pressepapier 
-  
-## Config Tmux :
-- Configuration de la barre de statut : La largeur de la partie gauche de la barre de statut est définie à 150. Le contenu de la barre de statut est également défini pour afficher la date, l’adresse IP de ‘eth0’ et ‘tun0’, l’IP publique, le nombre de connexions établies, l’utilisation du CPU et de la RAM.
-- Configuration de l’historique : La limite de l’historique est définie à 50000.
-- Configuration de la souris : La souris est activée et une action est définie pour le bouton droit de la souris pour coller le contenu du presse-papiers.
-- Configuration de la fenêtre : Un raccourci clavier est défini pour diviser la fenêtre en plusieurs panneaux.
+## 🖼️Configuration Tmux 
 
+- **Barre de statut personnalisée :**
+  - Largeur de la partie gauche : 150.
+  - Affiche : Date, IP `eth0`,`tun0`, IP publique, CPU, RAM.
+- **Historique :** 50 000 lignes 🔁
+- **Souris :** Activée. Clic droit = coller depuis le presse-papiers 🖱️📋
+- **Fenêtrage rapide :** 
+	- Raccourci pour diviser verticalement: `Ctrl+b+|`
+	- Raccourci pour diviser horizontalement: `Ctrl+b+-`
+	- Raccourci défini pour diviser les panneaux: `Ctrl+b+'`
+	- Switch de fenêtre:  `Alt+Fléches directionnelles`
 
-## Contribuer
-N'hésitez pas à contribuer en ouvrant des problèmes, en proposant des améliorations, ou en soumettant des demandes de fusion. Votre contribution est appréciée !
+## 💡 **Astuce rapide :**
+
+```bash
+tun0 && pythonh 80
+```
+Cela permet de lancer un `serveur web` ET de copier directement l'IP `TUN0` dans le presse-papiers ✨
+
+## Contribuer 🙌
+
+Toute aide est la bienvenue  ! 💪
+Ouvrez une `issue`, proposez une amélioration, ajouter un outil ou soumettez une `pull request`. 

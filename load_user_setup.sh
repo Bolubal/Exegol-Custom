@@ -1,1 +1,1 @@
-wget -qO- https://raw.githubusercontent.com/Frozenka/Exegol-Ressources/refs/heads/main/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/Bolubal/Exegol-Custom/refs/heads/main/install.sh | bash

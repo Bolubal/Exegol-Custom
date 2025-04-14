@@ -1,6 +1,6 @@
 # Cloner le dépôt Exegol-Ressources et entrer dans le dossier
 apt update
-git clone https://github.com/Frozenka/Exegol-Ressources.git
+git clone https://github.com/Bolubal/Exegol-Custom.git
 cd Exegol-Ressources
 
 # Ajouter des configurations à tmux.conf et zsh_history
